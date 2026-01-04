@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Library</title>
+    <link rel="stylesheet" href="library.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 My Library</h1>
+            <button id="newBookBtn" class="new-book-btn">+ New Book</button>
+        </header>
+
+        <div id="bookGrid" class="book-grid">
+            <!-- Books will be dynamically added here -->
+        </div>
+    </div>
+
+    <!-- Modal for adding new book -->
+    <div id="bookModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Add New Book</h2>
+                <span class="close">&times;</span>
+            </div>
+            <form id="bookForm">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" placeholder="Enter book title" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="author">Author</label>
+                    <input type="text" id="author" placeholder="Enter author name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="pages">Number of Pages</label>
+                    <input type="number" id="pages" placeholder="Enter page count" min="1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="genre">Genre</label>
+                    <input type="text" id="genre" placeholder="Enter genre (optional)">
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="isRead">
+                        <span class="checkbox-custom"></span>
+                        I've read this book
+                    </label>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" id="cancelBtn">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Add Book</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="library.js"></script>
+</body>
+
+</html>
